@@ -1,0 +1,18 @@
+.Signin_container{
+height: 32rem;
+width:100% !important;
+background-color: #b9fc86;
+}
+
+.Signin_paper{
+          background-color:#fafafa !important;
+          float: right;
+          width: 30%;
+          height: 380px;
+}
+
+.Footer_Contacts{
+          display: flex;
+          flex-direction: column;
+          float: left !important;
+}

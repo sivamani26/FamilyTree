@@ -2,6 +2,7 @@ import React from "react";
 import logoImage from "../Components/treelogo.png";
 import "./Nav_bar.css";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const Navbar: React.FC = () => {
   return (
@@ -14,18 +15,19 @@ const Navbar: React.FC = () => {
         width: "100%",
         top: "0px",
         height: "70px",
+        zIndex: "999999",
         backgroundColor: "#b9fc86",
-        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)"
+        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", left: "10px" }}>
-        <img
+      <Link to="/"><div style={{ display: "flex", alignItems: "center", left: "10px" }}>
+      <img
           src={logoImage}
           style={{
             borderRadius: "0px 50px 50px 0px",
             width: "63px",
           }}
-          alt="Family's Tree Logo"
+          alt="Uncover Your Legacy Logo"
         />
         <h1
           style={{
@@ -35,9 +37,10 @@ const Navbar: React.FC = () => {
             fontSize: "3rem",
           }}
         >
-          Family Tree
+          Uncover Your Legacy
         </h1>
-      </div>
+        
+      </div></Link>
       <ul
         style={{
           listStyle: "none",
@@ -51,14 +54,18 @@ const Navbar: React.FC = () => {
           fontSize: "1.3rem",
         }}
       >
-        <li>
+        {/* <li>
           <Link to="/">Home</Link>
+        </li> */}
+        <li>
+          <Link to="/signin">
+            <Button variant="outlined">Sign in</Button>
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/login">
+            <Button variant="outlined">Login</Button>
+          </Link>
         </li>
       </ul>
     </nav>
