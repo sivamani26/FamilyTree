@@ -1,0 +1,8 @@
+footer{
+          
+}
+.Footer_Contacts{
+          justify-content: end;
+          display: absolute;
+          align-items: flex-start;
+}
